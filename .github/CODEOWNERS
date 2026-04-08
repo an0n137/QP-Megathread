@@ -1,0 +1,20 @@
+# QP Megathread CODEOWNERS
+# ------------------------------------------------------------
+# This file restricts who can approve changes to certain paths.
+# For CODEOWNERS to actually BLOCK merges you also need a branch
+# protection rule on `main` with "Require review from Code Owners"
+# enabled (Settings → Branches → Branch protection rules).
+#
+# The homepage and shared assets are locked to maintainers.
+# Everything else (subpages, docs) is open for anyone to PR.
+# ------------------------------------------------------------
+
+# Lock the index and shared assets to maintainers
+/index.html           @KaladinDMP
+/assets/               @KaladinDMP
+/CNAME                @KaladinDMP
+/.github/             @KaladinDMP
+
+# Subpages are intentionally NOT listed here so that anyone
+# can contribute to them without a maintainer review.
+# (/pages/** is open to the community.)
