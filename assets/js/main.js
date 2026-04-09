@@ -31,3 +31,16 @@ if (nav) {
         else nav.classList.remove('scrolled');
     }, { passive: true });
 }
+
+fetch('assets/data/last-updated.json')
+  .then(r => r.json())
+  .then(d => {
+    const el = document.getElementById('last-updated');
+    if (el && d.date) {
+      const formatted = new Date(d.date).toLocaleDateString('en-US', {
+        year: 'numeric', month: 'long', day: 'numeric'
+      });
+      el.textContent = 'Updated: ' + formatted;
+    }
+  })
+  .catch(() => {}); // fail silently if file missing
