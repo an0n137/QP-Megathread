@@ -32,15 +32,19 @@ if (nav) {
     }, { passive: true });
 }
 
-fetch('assets/data/last-updated.json')
-  .then(r => r.json())
-  .then(d => {
-    const el = document.getElementById('last-updated');
-    if (el && d.date) {
-      const formatted = new Date(d.date).toLocaleDateString('en-US', {
-        year: 'numeric', month: 'long', day: 'numeric'
-      });
-      el.textContent = 'Updated: ' + formatted;
-    }
-  })
-  .catch(() => {}); // fail silently if file missing
+// Last-updated footer (index only) — only fetch if the element is present,
+// otherwise subpages 404 on the relative path.
+const updatedEl = document.getElementById('last-updated');
+if (updatedEl) {
+    fetch('assets/data/last-updated.json')
+      .then(r => r.json())
+      .then(d => {
+        if (d.date) {
+          const formatted = new Date(d.date).toLocaleDateString('en-US', {
+            year: 'numeric', month: 'long', day: 'numeric'
+          });
+          updatedEl.textContent = 'Updated: ' + formatted;
+        }
+      })
+      .catch(() => {}); // fail silently if file missing
+}
