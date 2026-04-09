@@ -634,6 +634,54 @@ a { color: inherit; text-decoration: none; }
     font-style: italic;
 }
 
+/* Content inside pills — sections, lists, blockquotes */
+.content-pill section {
+    margin-bottom: 32px;
+}
+.content-pill section:last-child { margin-bottom: 0; }
+.content-pill h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 16px;
+    color: #e6e8ef;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.content-pill ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px;
+}
+.content-pill ul li {
+    position: relative;
+    padding: 8px 0 8px 20px;
+    color: #b4b9c9;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.content-pill ul li:last-child { border-bottom: none; }
+.content-pill ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #00ffcc;
+    font-size: 0.85rem;
+}
+.content-pill blockquote {
+    margin: 20px 0 0;
+    padding: 20px 24px;
+    border-left: 3px solid #00ffcc;
+    border-radius: 0 12px 12px 0;
+    background: rgba(0, 255, 204, 0.04);
+}
+.content-pill blockquote p {
+    margin: 0;
+    color: #a4aac0;
+    font-size: 0.9rem;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 720px) {
     .navbar { padding: 14px 20px; }
