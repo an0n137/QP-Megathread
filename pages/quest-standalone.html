@@ -8,6 +8,59 @@
     <link rel="apple-touch-icon" href="../assets/images/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        .badge-key {
+            margin: 1.5rem 0 2rem;
+            padding: 1rem 1.25rem;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .badge-key h3 {
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+
+        .badge-key p {
+            margin: 0.75rem 0;
+        }
+
+        .source-badge {
+            display: inline-block;
+            margin-left: 0.5rem;
+            padding: 0.2rem 0.55rem;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .badge-desktop {
+            background: rgba(0, 153, 255, 0.16);
+            border: 1px solid rgba(0, 153, 255, 0.4);
+            color: #8fd0ff;
+        }
+
+        .badge-flexible {
+            background: rgba(0, 255, 163, 0.12);
+            border: 1px solid rgba(0, 255, 163, 0.35);
+            color: #86ffd2;
+        }
+
+        .badge-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0.75rem 0 0;
+        }
+
+        .badge-list li {
+            margin-bottom: 0.9rem;
+        }
+    </style>
 </head>
 <body>
 
@@ -33,9 +86,9 @@
 <header class="page-hero">
     <div class="breadcrumb"><a href="../index.html">~</a> / quest-standalone</div>
     <h1>🥽 Quest <span class="gradient-text">Standalone</span> Sources</h1>
-    <p data-i18n="page.quest.sub">Curated links, mirrors and libraries for native Quest content &mdash; no PC required 
-		but will need apps on headset to torrent, eg LibreTorrent available from 3rd Party Stores eg F-droid. Access to Telegram can be from the browser or the apk itself can be directly installed</p>
+    <p data-i18n="page.quest.sub">Curated links, mirrors, and libraries for native Quest content, with badges to help you quickly see which sources use desktop sideloaders and which are more flexible.</p>
     <div class="subnav">
+        <a href="#badge-key">Badge Key</a>
         <a href="#non-telegram">Non-Telegram Sources</a>
         <a href="#telegram">Telegram Sources</a>
     </div>
@@ -44,45 +97,142 @@
 <div class="content-pill-wrap">
     <div class="content-pill">
 
+        <section id="badge-key" class="badge-key">
+            <h3>Badge Key</h3>
+
+            <ul class="badge-list">
+                <li>
+                    <strong><span class="source-badge badge-desktop">Desktop Sideloaders</span></strong><br>
+                    These are sideloaders you run on your desktop PC, usually Windows, though some are multi-OS. They handle downloading and sideloading for you, and usually come with a gamelist included or can have one added easily.
+                </li>
+                <li>
+                    <strong><span class="source-badge badge-flexible">Flexible</span></strong><br>
+                    These are download-only sources and require a method to sideload. Depending on your preference and use case, that can be done natively on the Quest, with a PC sideloader, on Android, or anything in between.
+                </li>
+            </ul>
+
+            <p>
+                In general, desktop sideloaders are often the most convenient option for people at home with a computer. Flexible sources are useful if you are traveling, do not have a PC, or just prefer not to use one.
+            </p>
+
+            <p>
+                Telegram sources follow the same idea. They are also flexible and can be used with or without a desktop application depending on your workflow and preference.
+            </p>
+        </section>
+
         <section id="non-telegram">
             <h3>Non-Telegram Sources</h3>
 
-            <p>These sources don't require Telegram and can be accessed directly via the web or desktop apps.</p>
+            <p>These sources do not require Telegram. The first four are desktop sideloaders. Everything after that is flexible and download-only.</p>
 
             <ul>
-				<li><strong>Rookie's Sideloader:</strong> The official, iconic sideloader from the Legendary VRPirates. <a href="https://github.com/nerdunit/androidsideloader/releases/latest" target="_blank" rel="noopener">Rookie's Sideloader</a>. Since it no longer comes with the VRP gamelist out of the box, RSL has been updated to allow the <a href="https://qpmegathread.top/pages/public-json.html" target="_blank" rel="noopener">public.json method</a> or an rclone config.  
-                <li><strong>Rookie's &mdash; The Easy Way:</strong> Full walkthrough including server, designed to get you up and running fast. <a href="https://github.com/CrazyScamp/Rookie-3.2-Setup/" target="_blank" rel="noopener">Rookie 3.2 Setup Guide</a></li>
-                <li><strong>VRSideForge:</strong> A cool torrent scraper for Rutracker with a built-in sideloader. Great project for finding and installing content in one workflow. <a href="https://github.com/yGuilhermy/VRSideForge" target="_blank" rel="noopener">VRSideForge on GitHub</a></li>
-                <li><strong>Rutracker:</strong> Large selection of Quest content available via torrents. Can be hard to cut through the chaff, and torrents are somewhat limiting for this use case, but some people prefer it. <a href="https://rutracker.org/forum/tracker.php?f=2420" target="_blank" rel="noopener">RUTracker</a></li>
-				<li><strong>VRtor:</strong> A Russian website with a vast collection of Quest games that are updated quite often. It offers multiple download sources, including direct links from file hosting sites or Telegram. <a href="https://vrtor.ru/" target="_blank" rel="noopener">VRtor</a></li>
-				<li><strong>MetaFather:</strong> A site with a sideloader that includes games, it seems to have a bit of an unsavory reputation but not really sure why. Seems safe. <a href="https://www.metafather.org/" target="_blank" rel="noopener">MetaFather.org</a></li>
-                <li><strong>YAOSVR:</strong> Focuses on older stuff but may be attractive to those without PCs who need direct access to content. <a href="https://yaosvr.com/forum-127-1.html" target="_blank" rel="noopener">YaosVR</a></li>
-				<li><strong>BaozouVR:</strong> Basic chinese site, similar to VRMOO.net but FREE. <a href="https://www.baozouvr.com/" target="_blank" rel="noopener">BaozouVR</a></li>
+                <li>
+                    <strong>Rookie's Sideloader:</strong>
+                    <span class="source-badge badge-desktop">Desktop Sideloaders</span><br>
+                    The official, iconic sideloader from the Legendary VRPirates.
+                    <a href="https://github.com/nerdunit/androidsideloader/releases/latest" target="_blank" rel="noopener">Rookie's Sideloader</a>.
+                    Since it no longer comes with the VRP gamelist out of the box, RSL has been updated to allow the
+                    <a href="https://qpmegathread.top/pages/public-json.html" target="_blank" rel="noopener">public.json method</a>
+                    or an rclone config.
+                </li>
+
+                <li>
+                    <strong>Rookie's - The Easy Way:</strong>
+                    <span class="source-badge badge-desktop">Desktop Sideloaders</span><br>
+                    Full walkthrough including server, designed to get you up and running fast.
+                    <a href="https://github.com/CrazyScamp/Rookie-3.2-Setup/" target="_blank" rel="noopener">Rookie 3.2 Setup Guide</a>
+                </li>
+
+                <li>
+                    <strong>VRSideForge:</strong>
+                    <span class="source-badge badge-desktop">Desktop Sideloaders</span><br>
+                    A cool torrent scraper for Rutracker with a built-in sideloader. Great project for finding and installing content in one workflow.
+                    <a href="https://github.com/yGuilhermy/VRSideForge" target="_blank" rel="noopener">VRSideForge on GitHub</a>
+                </li>
+
+                <li>
+                    <strong>MetaFather:</strong>
+                    <span class="source-badge badge-desktop">Desktop Sideloaders</span><br>
+                    A site with a sideloader that includes games. It seems to have a bit of an unsavory reputation, but not really sure why. Seems safe.
+                    <a href="https://www.metafather.org/" target="_blank" rel="noopener">MetaFather.org</a>
+                </li>
+
+                <li>
+                    <strong>Rutracker:</strong>
+                    <span class="source-badge badge-flexible">Flexible</span><br>
+                    Large selection of Quest content available via torrents. Can be hard to cut through the chaff, and torrents are somewhat limiting for this use case, but some people prefer it.
+                    <a href="https://rutracker.org/forum/tracker.php?f=2420" target="_blank" rel="noopener">RUTracker</a>
+                </li>
+
+                <li>
+                    <strong>VRtor:</strong>
+                    <span class="source-badge badge-flexible">Flexible</span><br>
+                    A Russian website with a vast collection of Quest games that are updated quite often. It offers multiple download sources, including direct links from file hosting sites or Telegram.
+                    <a href="https://vrtor.ru/" target="_blank" rel="noopener">VRtor</a>
+                </li>
+
+                <li>
+                    <strong>YAOSVR:</strong>
+                    <span class="source-badge badge-flexible">Flexible</span><br>
+                    Focuses on older stuff but may be attractive to those without PCs who need direct access to content.
+                    <a href="https://yaosvr.com/forum-127-1.html" target="_blank" rel="noopener">YaosVR</a>
+                </li>
+
+                <li>
+                    <strong>BaozouVR:</strong>
+                    <span class="source-badge badge-flexible">Flexible</span><br>
+                    Basic Chinese site, similar to VRMOO.net but free.
+                    <a href="https://www.baozouvr.com/" target="_blank" rel="noopener">BaozouVR</a>
+                </li>
             </ul>
 
             <blockquote>
-                <p><strong>Note:</strong> This is not an exhaustive list &mdash; it's a starting point. If you know of other non-Telegram sources, open a PR to add them.</p>
+                <p><strong>Note:</strong> This is not an exhaustive list. It is a starting point. If you know of other non-Telegram sources, open a PR to add them.</p>
             </blockquote>
         </section>
 
         <section id="telegram">
             <h3>Telegram Sources</h3>
 
-            <p>These sources operate through Telegram channels and groups. You'll need the Telegram app to access them.</p>
+            <p>These sources operate through Telegram channels and groups. All of them except for MetaQuestNexus are flexible and can be used with or without a desktop application depending on your use case and preference.</p>
 
             <ul>
-                <li><strong>the_vrSrc:</strong> Provides info that works with Rookie and ApprenticeVR. Other tools can be adapted to work with it as well. Currently the best source available. <a href="https://t.me/the_vrSrc" target="_blank" rel="noopener">t.me/the_vrSrc</a></li>
-                <li><strong>VRlite:</strong> The Telegram group linked to the VRtor website from above. Everything is in Russian, but it offers many games available for direct download through Telegram. <a href="https://t.me/VRlite" target="_blank" rel="noopener">t.me/VRlite</a></li>
-                <li><strong>MetaQuestNexus:</strong> A small Spanish-language group that uses QLoader. Doesn't have a huge library, but has some stuff not available elsewhere. <a href="https://t.me/MetaQuestNexus" target="_blank" rel="noopener">t.me/MetaQuestNexus</a></li>
-            	<li><strong>NSWTL Gamehub:</strong> 
-					A bot managed multi-platform torrent game search and download. Seeders permitting. Claimed to be world's largest database (sic). Select group VR Oculus Quest. 
-					<a href="https://t.me/NSW_TorrentLibrary" target="_blank" rel="noopener">t.me/NSW_TorrentLibrary</a>
-				</li>
-				<li><strong>CosMos VR:</strong> 
-					Yet another Chinese site for torrents. Can just search for game in English. 
-					<a href="https://t.me/CosMos_VR" target="_blank" rel="noopener">t.me/CosMos_VR</a>
-				</li>
-			</ul>
+                <li>
+                    <strong>MetaQuestNexus:</strong>
+                    <span class="source-badge badge-desktop">Desktop Sideloaders</span><br>
+                    A small Spanish-language group that uses QLoader. Does not have a huge library, but has some stuff not available elsewhere.
+                    <a href="https://t.me/MetaQuestNexus" target="_blank" rel="noopener">t.me/MetaQuestNexus</a>
+                </li>
+				
+				<li>
+                    <strong>the_vrSrc:</strong>
+                    <span class="source-badge badge-flexible">Flexible</span><br>
+                    Provides info that works with Rookie and ApprenticeVR. Other tools can be adapted to work with it as well. Currently the best source available.
+                    <a href="https://t.me/the_vrSrc" target="_blank" rel="noopener">t.me/the_vrSrc</a>
+                </li>
+
+                <li>
+                    <strong>VRlite:</strong>
+                    <span class="source-badge badge-flexible">Flexible</span><br>
+                    The Telegram group linked to the VRtor website from above. Everything is in Russian, but it offers many games available for direct download through Telegram.
+                    <a href="https://t.me/VRlite" target="_blank" rel="noopener">t.me/VRlite</a>
+                </li>
+
+                <li>
+                    <strong>NSWTL Gamehub:</strong>
+                    <span class="source-badge badge-flexible">Flexible</span><br>
+                    A bot-managed multi-platform torrent game search and download source, seeders permitting. Claimed to be the world's largest database. Select group VR Oculus Quest.
+                    <a href="https://t.me/NSW_TorrentLibrary" target="_blank" rel="noopener">t.me/NSW_TorrentLibrary</a>
+                </li>
+
+                <li>
+                    <strong>CosMos VR:</strong>
+                    <span class="source-badge badge-flexible">Flexible</span><br>
+                    Yet another Chinese source for torrents. You can just search for a game in English.
+                    <a href="https://t.me/CosMos_VR" target="_blank" rel="noopener">t.me/CosMos_VR</a>
+                </li>
+            </ul>
+
             <blockquote>
                 <p><strong>Note:</strong> This is not an exhaustive list. If you know of other Telegram sources, open a PR to add them.</p>
             </blockquote>
@@ -93,7 +243,7 @@
 
 <footer class="footer">
     <div class="footer-inner">
-        <div><strong data-i18n="footer.title">r/QuestPiracy Community Megathread</strong> &mdash; <span data-i18n="footer.maintained_sub">maintained by the community.</span></div>
+        <div><strong data-i18n="footer.title">r/QuestPiracy Community Megathread</strong> <span data-i18n="footer.maintained_sub">maintained by the community.</span></div>
         <div class="footer-meta">
             <a href="../index.html" data-i18n="footer.back">← Back to index</a>
         </div>
